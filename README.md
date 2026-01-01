@@ -4,6 +4,8 @@
     - [GBDT](./learning-to-rank/gbdt/index.md)
     - [DNN (BERT)](./learning-to-rank/dnn/index.md)
 
+- [nDCG](./ndcg/index.md)
+
 ## 技術スタック
 
 - [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
