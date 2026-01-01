@@ -5,6 +5,7 @@
     - [DNN (BERT)](./learning-to-rank/dnn/index.md)
 
 - [nDCG](./ndcg/index.md)
+- [BM25](./bm25/index.md)
 
 ## 技術スタック
 
