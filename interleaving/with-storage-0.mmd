@@ -1,0 +1,63 @@
+%%{init: {
+  "flowchart": {
+    "rankSpacing": 40,
+    "nodeSpacing": 10,
+    "padding": 20
+  }
+}}%%
+flowchart LR
+    dc[(ドキュメント<br/>コレクション)]
+    rA[
+      <table border="1" cellspacing="0" bgcolor="#fdc">
+        <tr><th>順位</th><th>ドキュメント</th></tr>
+        <tr><td>1</td><td>40型液晶</td></tr>
+        <tr><td>2</td><td>55型液晶</td></tr>
+        <tr><td>3</td><td>32型壁掛け</td></tr>
+      </table>
+    ]
+    rB[
+      <table border="1" cellspacing="0" bgcolor="#fec">
+        <tr><th>順位</th><th>ドキュメント</th></tr>
+        <tr><td>1</td><td>40型4K</td></tr>
+        <tr><td>2</td><td>55型4K</td></tr>
+        <tr><td>3</td><td>65型4K</td></tr>
+      </table>
+    ]
+    rC[
+      <table border="1" cellspacing="0" bgcolor="#dec">
+        <tr><th>順位</th><th>ドキュメント</th></tr>
+        <tr><td>1</td><td>リモコン</td></tr>
+        <tr><td>2</td><td>24型液晶</td></tr>
+        <tr><td>3</td><td>32型液晶</td></tr>
+      </table>
+    ]
+    m@{icon: "mdi:blender", label: "Multileaving", h: "100"}
+    mA[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>ドキュメント</th></tr>
+        <tr bgcolor="#fdc"><td>1</td><td>既存</td><td>40型液晶</td></tr>
+        <tr bgcolor="#fec"><td>2</td><td>新製品</td><td>55型4K</td></tr>
+        <tr bgcolor="#dec"><td>3</td><td>価格</td><td>32型液晶</td></tr>
+      </table>
+    ]
+    mB[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>ドキュメント</th></tr>
+        <tr bgcolor="#fec"><td>1</td><td>新製品</td><td>40型4K</td></tr>
+        <tr bgcolor="#dec"><td>2</td><td>価格</td><td>24型液晶</td></tr>
+        <tr bgcolor="#fdc"><td>3</td><td>既存</td><td>32型壁掛け</td></tr>
+      </table>
+    ]
+    mC[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>ドキュメント</th></tr>
+        <tr bgcolor="#dec"><td>1</td><td>価格</td><td>リモコン</td></tr>
+        <tr bgcolor="#fdc"><td>2</td><td>既存</td><td>55型液晶</td></tr>
+        <tr bgcolor="#fec"><td>3</td><td>新製品</td><td>65型4K</td></tr>
+      </table>
+    ]
+    rc[(ランキング<br/>コレクション)]
+    dc -- 既存の<br/>ランキング --> rA --- m
+    dc -- 新製品重視 --> rB --- m
+    dc -- 価格重視 --> rC --- m
+    m --> mA & mB & mC --> rc

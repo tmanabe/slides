@@ -1,0 +1,70 @@
+%%{init: {
+  "flowchart": {
+    "rankSpacing": 40,
+    "nodeSpacing": 10,
+    "padding": 20
+  }
+}}%%
+flowchart LR
+    mA[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>ドキュメント</th></tr>
+        <tr bgcolor="#fdc"><td>1</td><td>既存</td><td>40型液晶</td></tr>
+        <tr bgcolor="#fec"><td>2</td><td>新製品</td><td>55型4K</td></tr>
+        <tr bgcolor="#dec"><td>3</td><td>価格</td><td>32型液晶</td></tr>
+      </table>
+    ]
+    mB[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>ドキュメント</th></tr>
+        <tr bgcolor="#fec"><td>1</td><td>新製品</td><td>40型4K</td></tr>
+        <tr bgcolor="#dec"><td>2</td><td>価格</td><td>24型液晶</td></tr>
+        <tr bgcolor="#fdc"><td>3</td><td>既存</td><td>32型壁掛け</td></tr>
+      </table>
+    ]
+    mC[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>ドキュメント</th></tr>
+        <tr bgcolor="#dec"><td>1</td><td>価格</td><td>リモコン</td></tr>
+        <tr bgcolor="#fdc"><td>2</td><td>既存</td><td>55型液晶</td></tr>
+        <tr bgcolor="#fec"><td>3</td><td>新製品</td><td>65型4K</td></tr>
+      </table>
+    ]
+    uA@{icon: "mdi:user", label: "ユーザA", h: "80"}
+    uB@{icon: "mdi:user", label: "ユーザB", h: "80"}
+    uC@{icon: "mdi:user", label: "ユーザC", h: "80"}
+    fA[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>フィードバック</th></tr>
+        <tr bgcolor="#fdc"><td>1</td><td>既存</td><td>クリック</td></tr>
+        <tr bgcolor="#fec"><td>2</td><td>新製品</td><td>-</td></tr>
+        <tr bgcolor="#dec"><td>3</td><td>価格</td><td>-</td></tr>
+      </table>
+    ]
+    fB[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>フィードバック</th></tr>
+        <tr bgcolor="#fec"><td>1</td><td>新製品</td><td>購買</td></tr>
+        <tr bgcolor="#dec"><td>2</td><td>価格</td><td>-</td></tr>
+        <tr bgcolor="#fdc"><td>3</td><td>既存</td><td>-</td></tr>
+      </table>
+    ]
+    fC[
+      <table border="1" cellspacing="0">
+        <tr><th>順位</th><th>手法</th><th>フィードバック</th></tr>
+        <tr bgcolor="#dec"><td>1</td><td>価格</td><td>-</td></tr>
+        <tr bgcolor="#fdc"><td>2</td><td>既存</td><td>-</td></tr>
+        <tr bgcolor="#fec"><td>3</td><td>新製品</td><td>クリック</td></tr>
+      </table>
+    ]
+    s[
+      <table border="1" cellspacing="0">
+        <tr><th>手法</th><th>CTR</th><th>CVR</th></tr>
+        <tr bgcolor="#fdc"><td>既存</td><td>1/3</td><td>0</td></tr>
+        <tr bgcolor="#fec"><td>新製品</td><td><strong>2/3</strong></td><td><strong>1/3</strong></td></tr>
+        <tr bgcolor="#dec"><td>価格</td><td>0</td><td>0</td></tr>
+      </table>
+    ]
+    mA --- uA --> fA --> s
+    mB --- uB --> fB --> s
+    mC --- uC --> fC --> s

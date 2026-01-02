@@ -11,9 +11,6 @@ style: |
     .highlight {
         color: red;
     }
-    :has(.language-mermaid) {
-        display: none;
-    }
 ---
 
 # BM25とバリエーションと実サービスへの応用
@@ -101,17 +98,7 @@ $$
 - Lucene (Elasticsearch, Solr) は、ドキュメント長を8ビットまで圧縮して保存する
     - ドキュメント長が256通りしかないのと同じ
 
-![](encode-decode.mermaid.png)
-
-```mermaid
-flowchart LR
-    A["L = 123,456<br/>0x47f12000"]
-    B["0xBF"]
-    C["L = 114,688<br/>0x47e00000"]
-
-    A -- 圧縮・保存 --> B
-    B -- 読込・伸長 --> C
-```
+![](encode-decode.mmd.png)
 
 - これで BM25 を計算して精度は出るのか……？
 - 実装して評価してみるしかない、例えば nDCG で
@@ -214,19 +201,7 @@ $$\text{weight}(\kappa, \beta) = \sum_{f \in \beta} \frac
 - 実際、自然に両立できた（アカデミックな評価はまだですが……）
 <sup>https://arxiv.org/abs/1709.03260</sup>
 
-![](progress.mermaid.png)
-
-```mermaid
-flowchart LR
-    A["BM25<br />(1994)"]
-    B["BM25F<br />(2004)"]
-    C["Expanded Span<br />(2008)"]
-    D["SpanF<br />(2017)"]
-
-    A -- 複数フィールドの考慮 --> B
-    A -- 近接性の考慮 --> C
-    B & C -- 統合 --> D
-```
+![](progress.mmd.png)
 
 ---
 

@@ -1,0 +1,9 @@
+flowchart LR
+    A["BM25<br />(1994)"]
+    B["BM25F<br />(2004)"]
+    C["Expanded Span<br />(2008)"]
+    D["SpanF<br />(2017)"]
+
+    A -- 複数フィールドの考慮 --> B
+    A -- 近接性の考慮 --> C
+    B & C -- 統合 --> D
