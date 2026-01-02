@@ -3,13 +3,14 @@
 - [ランキング学習](./learning-to-rank/index.md)
     - [GBDT](./learning-to-rank/gbdt/index.md)
     - [DNN (BERT)](./learning-to-rank/dnn/index.md)
-
 - [nDCG](./ndcg/index.md)
 - [BM25](./bm25/index.md)
 
 ## 技術スタック
 
-- [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+- [Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code)
+    - [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+    - [Mermaid Preview](https://marketplace.visualstudio.com/items?itemName=vstirbu.vscode-mermaid-preview)
 - [draw.io](https://www.drawio.com/)
 
 ## 外部リンク
