@@ -20,3 +20,19 @@ marp: true
 ---
 
 ![](with-storage-1.mmd.png)
+
+---
+
+![](shards-0.mmd.png)
+
+---
+
+![](shards-1.mmd.png)
+
+---
+
+![](shards-m.mmd.png)
+
+---
+
+![](sbs.mmd.png)

@@ -1,0 +1,26 @@
+flowchart LR
+    u@{icon: "mdi:user", label: "ユーザ", h: "80"}
+    q[
+      <table border="1" cellspacing="0">
+        <tr><td>テレビ</td><td bgcolor="lightgray">検索</td></tr>
+      </table>
+    ]
+    subgraph _[<br/>クエリの<br/>コピー・転送]
+        h@{icon: "mdi:router", label: "サーチヘッド", h: "80"}
+    end
+    q0[
+      <table border="1" cellspacing="0">
+        <tr><td>テレビ</td><td bgcolor="lightgray">検索</td></tr>
+      </table>
+    ]
+    q1[
+      <table border="1" cellspacing="0">
+        <tr><td>テレビ</td><td bgcolor="lightgray">検索</td></tr>
+      </table>
+    ]
+    s0[(シャード0)]
+    s1[(シャード1)]
+
+    u --- q --> h
+    h --- q0 ---> s0
+    h --- q1 ---> s1

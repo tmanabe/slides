@@ -1,0 +1,57 @@
+%%{init: {
+  "flowchart": {
+    "rankSpacing": 40,
+    "nodeSpacing": 10,
+    "padding": 20
+  }
+}}%%
+flowchart LR
+    dc[(ドキュメント<br/>コレクション)]
+    q0[
+      <table border="1" cellspacing="0">
+        <tr><td>冷蔵庫</td><td bgcolor="lightgray">検索</td></tr>
+      </table>
+    ]
+    q1[
+      <table border="1" cellspacing="0">
+        <tr><td>炊飯器</td><td bgcolor="lightgray">検索</td></tr>
+      </table>
+    ]
+    rAB0[
+      <table style="white-space: nowrap"><tr><td><table border="1" cellspacing="0" bgcolor="#fdc">
+        <tr><th>順位</th><th>ドキュメント</th></tr>
+        <tr><td>1</td><td>150L両開き​</td></tr>
+        <tr><td>2</td><td>150L右開き​</td></tr>
+        <tr><td>3</td><td>450L 6ドア​</td></tr>
+      </table></td><td><table border="1" cellspacing="0" bgcolor="#dec">
+        <tr><th>ドキュメント</th></tr>
+        <tr><td>180L両開き​</td></tr>
+        <tr><td>120L右開き​</td></tr>
+        <tr><td>150L両開き​</td></tr>
+      </table></td></tr></table>
+    ]
+    rAB1[
+      <table style="white-space: nowrap"><tr><td><table border="1" cellspacing="0" bgcolor="#fdc">
+        <tr><th>順位</th><th>ドキュメント</th></tr>
+        <tr><td>1</td><td>IH 5.5合​</td></tr>
+        <tr><td>2</td><td>真空 5.5合​</td></tr>
+        <tr><td>3</td><td>圧力 5.5合​​</td></tr>
+      </table></td><td><table border="1" cellspacing="0" bgcolor="#dec">
+        <tr><th>ドキュメント</th></tr>
+        <tr><td>圧力 5.5合​</td></tr>
+        <tr><td>5.5合​</td></tr>
+        <tr><td>3合​</td></tr>
+      </table></td></tr></table>
+    ]
+    uX@{icon: "mdi:user", label: "専門家A", h: "80"}
+    uY@{icon: "mdi:user", label: "専門家B", h: "80"}
+    fX[
+      <strong>左のほうが良い</strong>
+      理由：大きさに<br/>多様性があるから
+    ]
+    fY[
+      <strong>右のほうが良い</strong>
+      理由：値ごろ感が<br/>あるから
+    ]
+    dc --- q0 --> rAB0 --- uX --> fX
+    dc --- q1 --> rAB1 --- uY --> fY

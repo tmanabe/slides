@@ -1,0 +1,29 @@
+flowchart RL
+    u@{icon: "mdi:user", label: "ユーザ", h: "80"}
+    r[
+      <table border="1" cellspacing="0">
+        <tr><th></th><th></th></tr>
+        <tr><td></td><td>全体の<br/>ランキング</td></tr>
+      </table>
+    ]
+    subgraph _[<br/>ランキングの<br/>集約・転送]
+        h@{icon: "mdi:router", label: "サーチヘッド", h: "80"}
+    end
+    r0[
+      <table border="1" cellspacing="0">
+        <tr><th></th><th></th></tr>
+        <tr><td></td><td>シャード0<br/>ランキング</td></tr>
+      </table>
+    ]
+    r1[
+      <table border="1" cellspacing="0">
+        <tr><th></th><th></th></tr>
+        <tr><td></td><td>シャード1<br/>ランキング</td></tr>
+      </table>
+    ]
+    s0[(シャード0)]
+    s1[(シャード1)]
+
+    s0 --- r0 --> h
+    s1 --- r1 --> h
+    h --- r ---> u
