@@ -231,7 +231,7 @@ CPUまでドキュメントを読む
 
 - ドキュメントコレクション全体を複数のシャードに分割、検索
 
-![](../interleaving/sharding-0.png)
+![](../_common/sharding-0.png)
 
 ---
 
@@ -239,7 +239,7 @@ CPUまでドキュメントを読む
 
 - ドキュメントコレクション全体を複数のシャードに分割、検索
 
-![](../interleaving/sharding-1.png)
+![](../_common/sharding-1.png)
 
 ---
 

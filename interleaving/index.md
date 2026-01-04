@@ -118,7 +118,7 @@ marp: true
 
 - ドキュメントコレクション全体を複数のシャードに分割、検索
 
-![](sharding-0.png)
+![](../_common/sharding-0.png)
 
 ---
 
@@ -126,7 +126,7 @@ marp: true
 
 - ドキュメントコレクション全体を複数のシャードに分割、検索
 
-![](sharding-1.png)
+![](../_common/sharding-1.png)
 
 ---
 
