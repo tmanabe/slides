@@ -1,0 +1,46 @@
+%%{init: {
+  "flowchart": {
+    "rankSpacing": 40,
+    "nodeSpacing": 1,
+    "padding": 20
+  }
+}}%%
+flowchart RL
+    u@{icon: "mdi:user", label: "ユーザ", h: "80"}
+    r[
+      <table border="1" cellspacing="0">
+        <tr><th></th><th></th></tr>
+        <tr><td></td><td>全体の<br/>ランキング</td></tr>
+      </table>
+    ]
+    subgraph _[<br/>10MB/sが100本で<br/>1GB/s]
+      h@{icon: "mdi:router", label: "サーチヘッド", h: "80"}
+    end
+    r0[
+      <table border="1" cellspacing="0">
+        <tr><th></th><th></th></tr>
+        <tr><td></td><td>シャード0<br/>ランキング</td></tr>
+      </table>
+    ]
+    classDef t stroke:transparent, fill:transparent
+    rd0[⚫︎]:::t
+    rd1[⚫︎]:::t
+    rd2[⚫︎]:::t
+    r1[
+      <table border="1" cellspacing="0">
+        <tr><th></th><th></th></tr>
+        <tr><td></td><td>シャード99<br/>ランキング</td></tr>
+      </table>
+    ]
+    s0[(シャード0)]
+    sd0[⚫︎]:::t
+    sd1[⚫︎]:::t
+    sd2[⚫︎]:::t
+    s1[(シャード99)]
+
+    s0 --- r0 --> h
+    sd0 ~~~ rd0 ~~~ h
+    sd1 ~~~ rd1 ~~~ h
+    sd2 ~~~ rd2 ~~~ h
+    s1 --- r1 --> h
+    h --- r ---> u

@@ -6,6 +6,7 @@
 - [nDCG](ndcg/index.md)
 - [BM25](bm25/index.md)
 - [Interleaving/Multileaving](interleaving/index.md)
+- [ベクトル検索](vector-search/index.md)
 
 ## 技術スタック
 
