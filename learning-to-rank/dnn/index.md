@@ -8,16 +8,13 @@ style: |
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .lowlight {
-        color: gray;
-    }
 ---
 
-# DNN <span class="lowlight">(Deep Neural Network)</span>
+# DNN (Deep Neural Network)
 
 ---
 
-## DNN <span class="lowlight">(Deep Neural Network)</span>
+## DNN (Deep Neural Network)
 
 - Deep: 同じ部品を重ねる
 - Neural Network: （もともとは）神経細胞のモデル

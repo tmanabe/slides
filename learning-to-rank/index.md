@@ -1,12 +1,6 @@
 ---
 # https://marp.app/
 marp: true
-
-# https://x.com/y_hatt/status/1449951469961023488
-style: |
-    .lowlight {
-        color: gray;
-    }
 ---
 
 # ランキング学習
@@ -127,7 +121,7 @@ amazon-science/esci-data
 ## 単一の特徴量
 
 なんらかの値（特徴量）を抽出して、その値の順に並べる
-- 例えばトークンの出現頻度 <span class="lowlight">(term frequency, TF)</span>
+- 例えばトークンの出現頻度 (term frequency, TF)
 
 ---
 
@@ -166,7 +160,7 @@ QUERIES = ["恐竜", "無洗米 10kg", "電球ソケット アンティーク"]
 
 ---
 
-## トークンの出現頻度 <span class="lowlight">(term frequency, TF)</span>
+## トークンの出現頻度 (term frequency, TF)
 
 あとは：
 - クエリ側のトークンがドキュメント側に出現する頻度を数える

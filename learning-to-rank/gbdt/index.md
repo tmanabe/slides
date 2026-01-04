@@ -1,18 +1,13 @@
 ---
 # https://marp.app/
 marp: true
-
-style: |
-    .lowlight {
-        color: gray;
-    }
 ---
 
-# GBDT <span class="lowlight">(Gradient Boosting Decision Trees)</span>
+# GBDT (Gradient Boosting Decision Trees)
 
 ---
 
-## GBDT <span class="lowlight">(Gradient Boosting Decision Trees)</span>
+## GBDT (Gradient Boosting Decision Trees)
 
 - Gradient: 目的関数の勾配
 - Boosting: 複数のシンプルだが精度の低いモデルを協調させる

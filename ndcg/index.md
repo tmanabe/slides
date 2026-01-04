@@ -4,15 +4,9 @@ marp: true
 
 # https://x.com/y_hatt/status/1449951469961023488
 style: |
-    .centering{
-        text-align: center;
-    }
     .columns {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .small {
-        font-size: .6em;
     }
 ---
 
@@ -43,9 +37,10 @@ style: |
     - Cumulative: 評価はドキュメントごとの評価の累積
     - Gain: ドキュメントごとにクエリへの適合度（利得、Gain）を決める
 - 数式で書くと以下
-    - <span class="small">https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html</span>
 
 $$nDCG(Q, k) = \frac{1}{|Q|}\sum^{|Q|}_{j=1}Z_{kj}\sum^k_{m=1}\frac{2^{R(j, m)} - 1}{\log_2(1 + m)}$$
+
+<sup>https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html</sup>
 
 ---
 
@@ -84,28 +79,17 @@ $$nDCG(Q, k) = \frac{1}{|Q|}\sum^{|Q|}_{j=1}Z_{kj}\sum^k_{m=1}\frac{2^{R(j, m)} 
 
 ## そもそも適合度に矛盾が生じる
 
-<div class="columns"><div class="centering">
+例えば同じクエリ ![](query.drawio.png) でも……
 
-例えば同じクエリ
-
-![](query.drawio.png)
-
-でも……
-
-</div><div class="small">
-
-|順位|ドキュメント|ユーザA|ユーザB|ユーザB<br />（再訪問）|
+|順位|ドキュメント|ユーザA|ユーザB|ユーザB（再訪問）|
 |:-:|---|:-:|:-:|:-:|
 |1|USB HDD ケース|購買|クリック|-|
 |2|外付けHDD本体|-|-|-|
 |3|HDD ハードケース|クリック|クリック|購買|
 |4|外付けSSD本体|-|-|-|
 
-</div></div>
-
 - とか。それはユーザごと時刻ごとに暗黙の検索意図が違うから
-- （クエリ、ドキュメント）に対してではなく、
-（暗黙の検索意図、ドキュメント）に対して適合度が決まる
+- クエリに対してではなく、暗黙の検索意図に対して適合度が決まる
 - 研究っぽい言葉で言うと intent-aware な評価をする必要
 
 ---
