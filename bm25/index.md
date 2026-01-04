@@ -98,7 +98,7 @@ $$
 - Lucene (Elasticsearch, Solr) は、ドキュメント長を8ビットまで圧縮して保存する
     - ドキュメント長が256通りしかないのと同じ
 
-![](encode-decode.mmd.png)
+![](encode-decode.png)
 
 - これで BM25 を計算して精度は出るのか……？
 - 実装して評価してみるしかない、例えば nDCG で
@@ -201,7 +201,7 @@ $$\text{weight}(\kappa, \beta) = \sum_{f \in \beta} \frac
 - 実際、自然に両立できた（アカデミックな評価はまだですが……）
 <sup>https://arxiv.org/abs/1709.03260</sup>
 
-![](progress.mmd.png)
+![](progress.png)
 
 ---
 

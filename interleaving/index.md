@@ -3,36 +3,36 @@
 marp: true
 ---
 
-![](ab.mmd.png)
+![](ab.png)
 
 ---
 
-![](multileaving-0.mmd.png)
+![](multileaving-0.png)
 
 ---
 
-![](multileaving-1.mmd.png)
+![](multileaving-1.png)
 
 ---
 
-![](with-storage-0.mmd.png)
+![](with-storage-0.png)
 
 ---
 
-![](with-storage-1.mmd.png)
+![](with-storage-1.png)
 
 ---
 
-![](shards-0.mmd.png)
+![](sharding-0.png)
 
 ---
 
-![](shards-1.mmd.png)
+![](sharding-1.png)
 
 ---
 
-![](shards-m.mmd.png)
+![](sharding-m.png)
 
 ---
 
-![](sbs.mmd.png)
+![](sbs.png)
