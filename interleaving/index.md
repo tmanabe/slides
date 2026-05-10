@@ -1,6 +1,7 @@
 ---
 # https://marp.app/
 marp: true
+math: mathjax
 ---
 
 # Interleaving/Multileavingと実サービスへの応用
