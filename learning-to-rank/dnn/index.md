@@ -250,7 +250,7 @@ https://arxiv.org/abs/1706.03762
 
 </div><div>
 
-![](image20.png)
+![](gelu.png)
 
 </div></div>
 
